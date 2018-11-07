@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # Making 2-way JT9 QSOs with a QRP Labs U3S
 
 The heart of my apartment 630m "QRP" station is a [U3S Transmitter](https://www.qrp-labs.com/ultimate3/u3s.html) from QRP Labs. This kit transmitter is designed to be used as a QRP/QRSS beacon, rather than making QSOs. It works well as a WSPR beacon, but there's only so much fun to be had WSPRing.

@@ -1,6 +1,5 @@
 ---
 layout: default
-title: N1VF Project Page
 ---
 # N1VF Project Page
 
