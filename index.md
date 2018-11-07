@@ -1,6 +1,3 @@
----
-layout: default
----
 # N1VF Project Page
 
 ## 630m projects
