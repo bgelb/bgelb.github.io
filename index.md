@@ -8,3 +8,4 @@ layout: default
 
 ## other projects
 [Yaesu GS-232B-compatible Rotor Contoller](https://github.com/bgelb/sat_rotor/blob/master/README.md)
+.
