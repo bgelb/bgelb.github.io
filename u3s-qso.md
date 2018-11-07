@@ -191,3 +191,4 @@ avrdude done.  Thank you.
 - Even with the truncated EEPROM image, programming and rebooting the U3S takes around 5 seconds. This means you need to be very quick on the trigger responding to a received JT9 message to avoid missing the next transmit cycle.
 - Unlike WSJT-X software, when you enable transmission after the beginning of a transmit cycle, no transmission takes place until the next eligible TX cycle (if you're slow loading the next message, you may miss an entire TX cycle).
 - The U3S only supports 13-character "freeform" text messages. Two callsigns and "RRR" or "R-XX" rarely fit in 13 characters (the more compact encoding used by WSJT-X software for these standard messages is not implemented on the U3S). This requires some improvization/creativity in the messages to get the QSO done.
+- Stations worked as of 11/6/2018: W7IUV, VE7VV, W0YSE, KL7L, KM5SW
