@@ -17,3 +17,23 @@ So to make QSO-mode operation possible, I've devised a hacky scheme to change th
 ## Modifying the U3S EEPROM image
 
 ## Scripting it up!
+
+The script below ties it all together.
+
+```bash
+#!/bin/sh
+
+cp u3s.hex jt9-tmp.hex
+./u3s-eeprom-tool edit jt9-tmp.hex transmissions[0].mode "JT91"
+./u3s-eeprom-tool edit jt9-tmp.hex transmissions[0].enabled true
+./u3s-eeprom-tool edit jt9-tmp.hex transmissions[0].frequency 475200
+./u3s-eeprom-tool edit jt9-tmp.hex transmissions[0].powerOrMessageIndex 0
+./u3s-eeprom-tool edit jt9-tmp.hex message "$2"
+./u3s-eeprom-tool edit jt9-tmp.hex frame.frame 2
+./u3s-eeprom-tool edit jt9-tmp.hex frame.start $1
+
+# cut off the last 768 bytes of the image (unused), to save programming time
+cat jt9-tmp.hex | grep -v :200[123] > jt9-tmp-trunc.hex
+
+avrdude -c usbasp -p m328p -U eeprom:w:jt9-tmp-trunc.hex
+```
